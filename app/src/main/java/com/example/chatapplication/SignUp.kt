@@ -15,5 +15,16 @@ class SignUp : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
+
+        //  initializing the views
+        edtName = findViewById(R.id.edt_name)
+        edtEmail = findViewById(R.id.edt_email)
+        edtPassword = findViewById(R.id.edt_password)
+        btnSignUp = findViewById(R.id.btnSignUp)
+
+        //sign up user when button is clicked
+        btnSignUp.setOnClickListener {
+
+        }
     }
 }
