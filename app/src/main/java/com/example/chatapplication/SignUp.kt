@@ -48,8 +48,8 @@ class SignUp : AppCompatActivity() {
 
 
                 } else {
-                    // if signup is unsuccessfull
-                    Toast.makeText(this@SignUp, "Some error occured", Toast.LENGTH_SHORT).show()
+                    // if signup is unsuccessful
+                    Toast.makeText(this@SignUp, "Some error occurred", Toast.LENGTH_SHORT).show()
 
 
                 }
