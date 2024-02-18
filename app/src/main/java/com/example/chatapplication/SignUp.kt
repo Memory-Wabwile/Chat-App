@@ -30,19 +30,21 @@ class SignUp : AppCompatActivity() {
 
         // when button is clicked getting the email and password
         btnSignUp.setOnClickListener {
+            val name = edtName.text.toString()
             val email = edtEmail.text.toString()
             val password = edtPassword.toString()
 
             // creating/signing up the new user with email and password
-            signUp(email,password)
+            signUp(name,email,password)
         }
     }
-    private fun signUp(email:String, password:String){
+    private fun signUp(name:String, email:String, password:String){
         //logic of creating user
         mAuth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
-                    // code for redirecting to home page
+                     // code for redirecting to home page
+                    addUserToDatabase(name,email,mAuth.uid!!)
                     val intent = Intent(this@SignUp , MainActivity::class.java)
                     finish()
                     startActivity(intent)
@@ -57,4 +59,8 @@ class SignUp : AppCompatActivity() {
             }
 
     }
+private fun addUserToDatabase(name:String, email:String, password:String){
+
+}
+
 }
